@@ -25,9 +25,14 @@ html{
     scroll-behavior: smooth;
 }
 
+.surge{
+    animation: surge 2s 1;
+}
+
+
 /*---------------------------pre site-----------------------------*/
 form{
-    margin-top: 30vh;
+    margin-top: 15vh;
     background-color: #143278;
     border-radius: 15px;
     padding: 5vh 5vw;
@@ -37,13 +42,68 @@ form label, select{
     margin: 1.5vh 0vw;
 }
 
-#id{
-
+select{
+    cursor: pointer;
 }
+
+.container{
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicioAnimacao{
+    display: flex;
+    margin-bottom: -15vh;
+    margin-top: 15vh;
+    animation: inicia2 12s infinite;
+    height: 8vh;
+    width: 8vw;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-flexColuna{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gerar{
+    padding: 1vh 2.2vw;
+    border-radius: 12px;
+    background-color: #74800f;
+    border: 0.5px solid grey;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#gerar:hover{
+    transform: scale(1.03);
+    background-color: #b7ca0c;
+    transition: 0.3s;
+}
+#gerar:active{
+    transform: scale(1.05);
+    background-color: #e6ff02;
+    transition: 0.2s;
+}
+
+input{
+    cursor: pointer;
+}
+
 /*---------------------------pre site-----------------------------*/
 
 /*--------------------------------------Header--------------------------------*/
 header {
+    position: fixed;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -58,7 +118,7 @@ header img{
 }
 
 header div{
-    width: 35%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -119,6 +179,18 @@ article img{
     border-radius: 50%;
 }
 
+.checks{
+    margin-top: 3vh;
+}
+
+.checks input{
+    margin: 0vh 1vw;
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    border: 2px solid #ccc; 
+}
+
 .conteudoGeral{
     display: flex;
     flex-direction: column;
@@ -154,7 +226,7 @@ footer{text-align: center; width: 100vw;     background-color: #143278; padding:
 }
 @keyframes cimaBaixo {
     from {
-        transform: translateY(-30vh);
+        transform: translateY(-35vh);
     }
     to {
         transform: translateY(0);
@@ -162,10 +234,18 @@ footer{text-align: center; width: 100vw;     background-color: #143278; padding:
 }
 @keyframes baixoCima {
     from {
-        transform: translateY(80vh);
+        transform: translateY(88vh);
     }
     to {
         transform: translateY(0);
+    }
+}
+@keyframes surge {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 /*--------------------------------------Animação--------------------------------*/
